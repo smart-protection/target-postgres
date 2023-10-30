@@ -829,6 +829,10 @@ class PostgresTarget(SQLInterface):
             json_type = 'boolean'
         elif sql_type == 'text':
             json_type = 'string'
+        elif sql_type == 'character varying':
+            json_type = 'string'
+        elif sql_type == 'uuid':
+            json_type = 'string'
         else:
             raise PostgresError('Unsupported type `{}` in existing target table'.format(sql_type))
 
