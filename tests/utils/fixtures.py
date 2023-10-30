@@ -12,6 +12,7 @@ CONFIG = {
     'postgres_host': os.environ['POSTGRES_HOST'],
     'postgres_database': os.environ['POSTGRES_DATABASE'],
     'postgres_username': os.environ['POSTGRES_USERNAME'],
+    'postgres_password': os.environ['POSTGRES_PASSWORD'],
     'disable_collection': True,
     'logging_level': 'DEBUG'
 }
@@ -19,7 +20,8 @@ CONFIG = {
 TEST_DB = {
     'host': CONFIG['postgres_host'],
     'dbname': CONFIG['postgres_database'],
-    'user': CONFIG['postgres_username']
+    'user': CONFIG['postgres_username'],
+    'password': CONFIG['postgres_password']
 }
 
 fake = Faker()
